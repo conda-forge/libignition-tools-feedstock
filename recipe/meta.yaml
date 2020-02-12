@@ -1,5 +1,6 @@
-{% set name = "libignition-tools" %}
-{% set version = "0.2.0" %}
+{% set base_name = "libignition-tools" %}
+{% set version = "1.0.0" %}
+{% set name = base_name + version.split('.')[0] %}
 
 package:
   name: {{ name }}
@@ -7,7 +8,7 @@ package:
 
 source:
   - url: https://bitbucket.org/ignitionrobotics/ign-tools/get/ignition-tools_{{ version }}.tar.gz
-    sha256: a342dfad6e9b32ea400eeaa64253251a73a6e768ba539ad8302797950888a87e
+    sha256: 57f71b6d771c3f24471c7d38f4d56cbe9c36a03d3262e4980b07237fe52fa5ae
 
 build:
   number: 0
