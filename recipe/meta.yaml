@@ -1,5 +1,6 @@
-{% set name = "libignition-tools" %}
+{% set base_name = "libignition-tools" %}
 {% set version = "1.0.0" %}
+{% set name = base_name + version.split('.')[0] %}
 
 package:
   name: {{ name }}
