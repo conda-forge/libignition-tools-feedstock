@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://bitbucket.org/ignitionrobotics/ign-tools/get/ignition-tools_{{ version }}.tar.gz
-    sha256: 57f71b6d771c3f24471c7d38f4d56cbe9c36a03d3262e4980b07237fe52fa5ae
+  - url: https://github.com/ignitionrobotics/ign-tools/archive/ignition-tools_{{ version }}.tar.gz
+    sha256: ea7036e73ad7893fee7c7dc06e1760f11e0cac57c024886a371359ce2768cce7
 
 build:
-  number: 0
-  skip: true  # [win and vc<14]
+  number: 1
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
@@ -33,7 +33,7 @@ test:
     - if exist %PREFIX%\\Library\\lib\\cmake\\ignition-tools\\ignition-tools-config.cmake (exit 0) else (exit 1)  # [win]
 
 about:
-  home: https://bitbucket.org/ignitionrobotics/ign-tools
+  home: https://github.com/ignitionrobotics/ign-tools
   license: Apache-2.0
   license_file: LICENSE
   summary: 'Ignition Tools'

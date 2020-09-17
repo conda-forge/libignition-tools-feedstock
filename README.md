@@ -1,11 +1,11 @@
-About libignition-tools
-=======================
+About libignition-tools1
+========================
 
-Home: https://bitbucket.org/ignitionrobotics/ign-tools
+Home: https://github.com/ignitionrobotics/ign-tools
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Ignition Tools
 
@@ -29,50 +29,37 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_ruby2.5</td>
+              <td>linux_64_ruby2.5</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=linux&configuration=linux_ruby2.5" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=linux&configuration=linux_64_ruby2.5" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ruby2.6</td>
+              <td>linux_64_ruby2.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=linux&configuration=linux_ruby2.6" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=linux&configuration=linux_64_ruby2.6" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_ruby2.5</td>
+              <td>osx_64_ruby2.5</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=osx&configuration=osx_ruby2.5" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=osx&configuration=osx_64_ruby2.5" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_ruby2.6</td>
+              <td>osx_64_ruby2.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=osx&configuration=osx_ruby2.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_vc14</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=win&configuration=win_vc14" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=osx&configuration=osx_64_ruby2.6" alt="variant">
                 </a>
               </td>
             </tr>
           </tbody>
         </table>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>
@@ -82,27 +69,27 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--tools-green.svg)](https://anaconda.org/conda-forge/libignition-tools) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-tools.svg)](https://anaconda.org/conda-forge/libignition-tools) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-tools.svg)](https://anaconda.org/conda-forge/libignition-tools) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-tools.svg)](https://anaconda.org/conda-forge/libignition-tools) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--tools1-green.svg)](https://anaconda.org/conda-forge/libignition-tools1) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-tools1.svg)](https://anaconda.org/conda-forge/libignition-tools1) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-tools1.svg)](https://anaconda.org/conda-forge/libignition-tools1) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-tools1.svg)](https://anaconda.org/conda-forge/libignition-tools1) |
 
-Installing libignition-tools
-============================
+Installing libignition-tools1
+=============================
 
-Installing `libignition-tools` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `libignition-tools1` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `libignition-tools` can be installed with:
+Once the `conda-forge` channel has been enabled, `libignition-tools1` can be installed with:
 
 ```
-conda install libignition-tools
+conda install libignition-tools1
 ```
 
-It is possible to list all of the versions of `libignition-tools` available on your platform with:
+It is possible to list all of the versions of `libignition-tools1` available on your platform with:
 
 ```
-conda search libignition-tools --channel conda-forge
+conda search libignition-tools1 --channel conda-forge
 ```
 
 
@@ -144,17 +131,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating libignition-tools-feedstock
-====================================
+Updating libignition-tools1-feedstock
+=====================================
 
-If you would like to improve the libignition-tools recipe or build a new
+If you would like to improve the libignition-tools1 recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/libignition-tools-feedstock are
+Note that all branches in the conda-forge/libignition-tools1-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
