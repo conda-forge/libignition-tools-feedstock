@@ -11,7 +11,7 @@ source:
     sha256: ea7036e73ad7893fee7c7dc06e1760f11e0cac57c024886a371359ce2768cce7
 
 build:
-  number: 2
+  number: 3
   skip: false
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
@@ -27,6 +27,9 @@ requirements:
     - ruby 2.7                           # [win]
     - cmake
     - pkg-config
+  run:
+    - ruby                               # [not win]
+    - ruby 2.7                           # [win]
 
 test:
   commands:
