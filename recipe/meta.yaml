@@ -15,7 +15,6 @@ build:
   skip: false
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
-    - ruby
 
 requirements:
   build:
@@ -28,6 +27,9 @@ requirements:
     - ruby 2.7                           # [win]
     - cmake
     - pkg-config
+  run:
+    - ruby                               # [not win]
+    - ruby 2.7                           # [win]
 
 test:
   commands:
