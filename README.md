@@ -13,7 +13,21 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://travis-ci.com/conda-forge/libignition-tools-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/libignition-tools-feedstock/master.svg?label=macOS">
+      </a>
+    </td>
+  </tr><tr>
+    <td>Drone</td>
+    <td>
+      <a href="https://cloud.drone.io/conda-forge/libignition-tools-feedstock">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/libignition-tools-feedstock/master.svg?label=Linux">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -41,6 +55,34 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_ruby2.5</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_ruby2.5" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_ruby2.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_ruby2.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_ruby2.5</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_ruby2.5" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_ruby2.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=linux&configuration=linux_ppc64le_ruby2.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_ruby2.5</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
@@ -55,17 +97,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_ruby2.5</td>
+              <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=win&configuration=win_64_ruby2.5" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_ruby2.6</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=win&configuration=win_64_ruby2.6" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=win&configuration=win_64_" alt="variant">
                 </a>
               </td>
             </tr>
