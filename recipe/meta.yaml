@@ -1,5 +1,5 @@
 {% set base_name = "libignition-tools" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 {% set name = base_name + version.split('.')[0] %}
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   - url: https://github.com/ignitionrobotics/ign-tools/archive/ignition-tools_{{ version }}.tar.gz
-    sha256: ea7036e73ad7893fee7c7dc06e1760f11e0cac57c024886a371359ce2768cce7
+    sha256: 475141593023cb37a05a5eaddee1bb400faa9056272173838df36aef2d982f94
 
 build:
-  number: 3
+  number: 0
   skip: false
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
@@ -40,7 +40,7 @@ about:
   home: https://github.com/ignitionrobotics/ign-tools
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Ignition Tools'
+  summary: Ignition Tools
 
 extra:
   recipe-maintainers:
