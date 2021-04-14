@@ -97,6 +97,20 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_ruby2.5</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_ruby2.5" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_ruby2.6</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-tools-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_ruby2.6" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8231&branchName=master">
@@ -125,6 +139,7 @@ Installing `libignition-tools1` from the `conda-forge` channel can be achieved b
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `libignition-tools1` can be installed with:
