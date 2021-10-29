@@ -25,6 +25,8 @@ requirements:
     - ruby 2.7                           # [win]
     - cmake
     - pkg-config
+  host:
+    - backward-cpp
   run:
     - ruby                               # [not win]
     - ruby 2.7                           # [win]
