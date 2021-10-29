@@ -5,7 +5,8 @@ cd build
 
 cmake ${CMAKE_ARGS} .. \
       -DCMAKE_BUILD_TYPE=Release \
-      -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True
+      -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True \
+      -DUSE_SYSTEM_BACKWARDCPP:BOOL=ON 
 
 cmake --build . --config Release
 cmake --build . --config Release --target install
