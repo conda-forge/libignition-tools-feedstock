@@ -6,6 +6,7 @@ cmake ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True ^
+    -DUSE_SYSTEM_BACKWARDCPP:BOOL=ON ^
     %SRC_DIR%
 if errorlevel 1 exit 1
 
@@ -18,5 +19,5 @@ cmake --build . --config Release --target install
 if errorlevel 1 exit 1
 
 :: Test.
-ctest -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION"
+ctest --output-on-failure -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION"
 if errorlevel 1 exit 1
