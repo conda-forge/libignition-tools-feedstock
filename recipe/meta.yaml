@@ -23,6 +23,7 @@ requirements:
     - make                               # [not win]
     - ruby                               # [not win]
     - ruby 2.7                           # [win]
+    - ninja                              # [win]
     - cmake
     - pkg-config
   host:
