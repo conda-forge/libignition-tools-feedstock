@@ -9,8 +9,7 @@ package:
 source:
   - url: https://github.com/ignitionrobotics/ign-tools/archive/ignition-tools_{{ version }}.tar.gz
     sha256: 6774ecf88bde9154fcbb52b491b85040e7c3d3e21986839cfe181001104a0cb9
-    patches:
-      - debug_test.patch
+
 
 build:
   number: 0
