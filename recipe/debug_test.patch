@@ -1,0 +1,44 @@
+From 1d08c31d629ba2cf51efc37b50085f6eb557a2bc Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Sat, 27 Nov 2021 16:13:19 +0100
+Subject: [PATCH] Update run_test.cmake
+
+---
+ cmake/run_test.cmake | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/cmake/run_test.cmake b/cmake/run_test.cmake
+index a39fccb..ad260e1 100644
+--- a/cmake/run_test.cmake
++++ b/cmake/run_test.cmake
+@@ -1,9 +1,13 @@
+ # This script is part of the unit test mechanism for ign-tools.
++message("ign-tools run_test executing process ruby ${IGN_SCRIPT}  ${TEST_NAME}")
+ execute_process(COMMAND ruby ${IGN_SCRIPT} 
+   ${TEST_NAME}
+   OUTPUT_VARIABLE TEST_OUTPUT
+   ERROR_VARIABLE TEST_ERROR)
+ 
++message("ign-tools run_test TEST_OUTPUT: ${TEST_OUTPUT}")
++message("ign-tools run_test TEST_ERROR: ${TEST_ERROR}")
++
+ # Copy failure result everytime we run test so we don't accidentally use
+ # previous results.
+ execute_process(COMMAND
+@@ -12,6 +16,9 @@ execute_process(COMMAND
+   "../test_results/${TEST_NAME}.xml"
+ )
+ 
++message("ign-tools run_test File copied")
++
++
+ if (${TEST_OUTPUT} MATCHES "Test executed" AND NOT 
+     ((${TEST_OUTPUT} MATCHES "Library error") OR 
+     (${TEST_ERROR} MATCHES "Library error")))
+@@ -25,3 +32,6 @@ else()
+   Output: ${TEST_OUTPUT}
+   Error: ${TEST_ERROR}")
+ endif()
++
++message("ign-tools run_test check done")
++
