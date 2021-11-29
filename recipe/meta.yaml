@@ -38,7 +38,11 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/lib/cmake/ignition-tools/ignition-tools-config.cmake  # [not win]
-    - if exist %PREFIX%\\Library\\lib\\cmake\\ignition-tools\\ignition-tools-config.cmake (exit 0) else (exit 1)  # [win]
+    - test -f ${PREFIX}/lib/libignition-tools-backward.so  # [linux]
+    - test -f ${PREFIX}/lib/libignition-tools-backward.dylib  # [osx]
+    - if not exist %PREFIX%\\Library\\lib\\cmake\\ignition-tools\\ignition-tools-config.cmake (exit 1)  # [win]
+    - if not exist $PREFIX$\\Library\\lib\\ignition-tools-backward.lib (exit 1)  # [win]
+    - if not exist $PREFIX$\\Library\\bin\\ignition-tools-backward.dll (exit 1)  # [win]
 
 about:
   home: https://github.com/ignitionrobotics/ign-tools
