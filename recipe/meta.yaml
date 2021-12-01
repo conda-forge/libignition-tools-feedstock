@@ -38,7 +38,7 @@ test:
   commands:
     - test -f ${PREFIX}/lib/cmake/ignition-tools/ignition-tools-config.cmake  # [not win]
     - if exist %PREFIX%\\Library\\lib\\cmake\\ignition-tools\\ignition-tools-config.cmake (exit 0) else (exit 1)  # [win]
-    - ign help
+    - ign help  # [not win]
 
 about:
   home: https://github.com/ignitionrobotics/ign-tools
