@@ -41,7 +41,8 @@ test:
     - test -f ${PREFIX}/lib/libignition-tools-backward.so  # [linux]
     - test -f ${PREFIX}/lib/libignition-tools-backward.dylib  # [osx]
     - if not exist %PREFIX%\\Library\\lib\\cmake\\ignition-tools\\ignition-tools-config.cmake (exit 1)  # [win]
-    - if not exist $PREFIX$\\Library\\lib\\ignition-tools-backward.lib (exit 1)  # [win]
+    # See https://github.com/conda-forge/libignition-tools-feedstock/pull/13#issuecomment-984156850
+    # - if not exist $PREFIX$\\Library\\lib\\ignition-tools-backward.lib (exit 1)  # [win]
     - if not exist $PREFIX$\\Library\\bin\\ignition-tools-backward.dll (exit 1)  # [win]
 
 about:
