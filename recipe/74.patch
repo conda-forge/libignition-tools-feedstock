@@ -1,0 +1,27 @@
+From d3320268e584f9d07281466dfeed3ca8e5074667 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Mon, 29 Nov 2021 17:25:48 +0100
+Subject: [PATCH] Fix .dll installation directory on Windows
+
+Signed-off-by: Silvio <silvio@traversaro.it>
+---
+ src/CMakeLists.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 42f152f..2605b47 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -34,7 +34,10 @@ if(MSVC)
+   target_compile_options(backward PUBLIC /wd4267)
+   target_compile_options(backward PUBLIC /wd4996)
+ endif()
+-install (TARGETS backward DESTINATION ${LIB_INSTALL_DIR})
++install (TARGETS backward 
++         LIBRARY DESTINATION ${LIB_INSTALL_DIR}
++         ARCHIVE DESTINATION ${LIB_INSTALL_DIR} 
++         RUNTIME DESTINATION ${BIN_INSTALL_DIR})
+ 
+ #===============================================================================
+ # Used for the installed version.
+ 

@@ -10,10 +10,12 @@ source:
   - url: https://github.com/ignitionrobotics/ign-tools/archive/ignition-tools_{{ version }}.tar.gz
     sha256: 6774ecf88bde9154fcbb52b491b85040e7c3d3e21986839cfe181001104a0cb9
     patches:
+      - 73.patch
+      - 74.patch
       - fix-backward-install.patch
 
 build:
-  number: 1
+  number: 2
   skip: false
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
@@ -37,7 +39,9 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/lib/cmake/ignition-tools/ignition-tools-config.cmake  # [not win]
-    - if exist %PREFIX%\\Library\\lib\\cmake\\ignition-tools\\ignition-tools-config.cmake (exit 0) else (exit 1)  # [win]
+    - test -f ${PREFIX}/lib/libignition-tools-backward.so  # [linux]
+    - test -f ${PREFIX}/lib/libignition-tools-backward.dylib  # [osx]
+    - if not exist %PREFIX%\\Library\\lib\\cmake\\ignition-tools\\ignition-tools-config.cmake (exit 1)  # [win]
 
 about:
   home: https://github.com/ignitionrobotics/ign-tools
