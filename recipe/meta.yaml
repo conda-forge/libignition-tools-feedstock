@@ -10,8 +10,6 @@ source:
   - url: https://github.com/ignitionrobotics/ign-tools/archive/ignition-tools_{{ version }}.tar.gz
     sha256: cc99189063b6556e539836a438bdbb9da6eca1fe95a7058d46bfc17debc3d8f5
     patches:
-      - 73.patch
-      - 74.patch
       - fix-backward-install.patch
 
 build:
