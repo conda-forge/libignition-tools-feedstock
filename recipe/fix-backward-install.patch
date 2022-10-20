@@ -1,18 +1,15 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 9f64f01..c272803 100644
+index 8bd7561..9bbdc73 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -38,12 +38,7 @@ install (TARGETS backward DESTINATION ${LIB_INSTALL_DIR})
+@@ -41,7 +41,9 @@ install (TARGETS backward
  
  #===============================================================================
  # Used for the installed version.
 -if(APPLE)
--  # On macOS, the full path to the library since DYLD_LIBRARY_PATH may not work.
--  set(backward_library_name ${CMAKE_INSTALL_FULL_LIBDIR}/$<TARGET_FILE_NAME:backward>)
--else()
--  set(backward_library_name $<TARGET_FILE_NAME:backward>)
--endif()
-+set(backward_library_name ${CMAKE_INSTALL_FULL_LIBDIR}/$<TARGET_FILE_NAME:backward>)
- 
- # Two steps to create `ign`, First using `configure_file`, to interpolate cmake variables. Then
- # use `file(GENERATE ...)` to use generator expressions
++if(NOT WIN32)
++  # If we are not on Windows specify the full path as the different ways that dlopen
++  # has to find libraries without full path may not work (while on Windows PATH should work)
+   # On macOS, the full path to the library since DYLD_LIBRARY_PATH may not work.
+   set(backward_library_name ${CMAKE_INSTALL_FULL_LIBDIR}/$<TARGET_FILE_NAME:backward>)
+ else()
