@@ -13,8 +13,7 @@ source:
       - fix-backward-install.patch
 
 build:
-  number: 1
-  skip: false
+  number: 2
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -24,7 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - make                               # [not win]
     - ruby                               # [not win]
-    - ruby 2.7                           # [win]
+    - ruby 3                             # [win]
     - ninja                              # [win]
     - cmake
     - pkg-config
@@ -32,7 +31,7 @@ requirements:
     - backward-cpp
   run:
     - ruby                               # [not win]
-    - ruby 2.7                           # [win]
+    - ruby 3                             # [win]
 
 test:
   commands:
